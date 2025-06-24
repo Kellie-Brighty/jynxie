@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Initialize Firebase Admin if not already initialized
 if (!admin.apps.length) {
+  // Firebase Functions automatically initializes with correct credentials
   admin.initializeApp();
 }
 
@@ -23,9 +24,8 @@ let botInstance = null;
 async function initializeBot() {
   if (!botInstance) {
     try {
-      const token =
-        functions.config().telegram?.bot_token ||
-        process.env.TELEGRAM_BOT_TOKEN;
+      // Get bot token from Firebase Functions config
+      const token = functions.config().telegram?.bot_token;
 
       if (!token) {
         throw new Error("TELEGRAM_BOT_TOKEN not configured");

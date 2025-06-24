@@ -13,11 +13,11 @@ const config = {
 
   // Firebase Configuration
   firebase: {
-    projectId: process.env.FIREBASE_PROJECT_ID || "",
-    privateKey: process.env.FIREBASE_PRIVATE_KEY
-      ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n")
+    projectId: process.env.FB_PROJECT_ID || "",
+    privateKey: process.env.FB_PRIVATE_KEY
+      ? process.env.FB_PRIVATE_KEY.replace(/\\n/g, "\n")
       : "",
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL || "",
+    clientEmail: process.env.FB_CLIENT_EMAIL || "",
   },
 
   // Ethereum Configuration

@@ -20,9 +20,9 @@ TELEGRAM_BOT_TOKEN=your_bot_token_here
 TELEGRAM_WEBHOOK_URL=https://your-project-id.web.app/webhook
 WEBHOOK_SECRET=create_random_secret_string
 
-FIREBASE_PROJECT_ID=your_project_id
-FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_KEY\n-----END PRIVATE KEY-----"
-FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxx@your-project.iam.gserviceaccount.com
+FB_PROJECT_ID=your_project_id
+FB_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_KEY\n-----END PRIVATE KEY-----"
+FB_CLIENT_EMAIL=firebase-adminsdk-xxx@your-project.iam.gserviceaccount.com
 
 ALCHEMY_API_KEY=your_alchemy_api_key
 ALCHEMY_NETWORK=sepolia
@@ -39,7 +39,9 @@ PLATFORM_WALLET_ADDRESS=your_platform_wallet_address
 firebase functions:config:set telegram.bot_token="your_bot_token"
 firebase functions:config:set telegram.webhook_url="https://your-project.web.app/webhook"
 firebase functions:config:set webhook.secret="your_secret"
-firebase functions:config:set firebase.project_id="your_project_id"
+firebase functions:config:set telegram.bot_token="your_bot_token"
+firebase functions:config:set alchemy.api_key="your_alchemy_key"
+firebase functions:config:set contract.address="0xf1074ed25ea472671ddb08b5680f7b444b5e9ae3"
 # ... add all other variables
 ```
 

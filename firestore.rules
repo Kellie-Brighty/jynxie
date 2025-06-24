@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection - only bot can read/write
+    match /users/{userId} {
+      allow read, write: if false; // Only server-side access
+    }
+    
+    // Sessions collection - only bot can read/write
+    match /sessions/{sessionId} {
+      allow read, write: if false; // Only server-side access
+    }
+    
+    // Launches collection - only bot can read/write
+    match /launches/{launchId} {
+      allow read, write: if false; // Only server-side access
+    }
+    
+    // Transactions collection - only bot can read/write
+    match /transactions/{transactionId} {
+      allow read, write: if false; // Only server-side access
+    }
+    
+    // Public stats (if needed for dashboard)
+    match /public_stats/{document} {
+      allow read: if true;
+      allow write: if false; // Only server-side access
+    }
+    
+    // Admin collections (if needed)
+    match /admin/{document} {
+      allow read, write: if false; // Only server-side access
+    }
+  }
+} 

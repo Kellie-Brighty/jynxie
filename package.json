@@ -4,8 +4,8 @@
   "description": "Modern Telegram bot for token launching on Ethereum",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node init && node index.js",
+    "dev": "node init && nodemon index.js",
     "setup": "node setup.js",
     "deploy": "firebase deploy",
     "deploy:functions": "firebase deploy --only functions",
